@@ -1,45 +1,103 @@
-header {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    font-size: 1rem;
-    color: var(--secondary-color);
-    text-decoration: none;
-    padding: 20px;
-    background-color: var(--primary-bg); /* Ensure it has the same background as body */
-    max-width: 100%; /* Make the header span the full width */
+/* Reset some basic elements for better styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    background-image: url("images/ladybug2.jpg");
-    background-color: #65FF00;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
 }
 
-nav {
-    font-size: 1.5625rem;
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
     text-align: center;
-    box-shadow: 0 0 5px 3px #FF0065;
-    border-radius: 15px;
-    padding: 10px 20px;
-    margin-top: 10px; /* Add some spacing from other elements */
-    background-color: var(--primary-color); /* Make it stand out */
-    color: var(--secondary-color);
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    color: #4CAF50;
+}
+
+main {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+    padding: 8px 16px;
+    margin: 0 8px;
+}
+
+a:hover {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Main navigation bar */
+.main-nav ul {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Space between navigation links */
+    gap: 20px;
 }
 
-nav a {
-    color: var(--secondary-color);
-    text-decoration: none;
-    font-weight: bold;
+.main-nav li {
+    display: inline;
 }
 
-nav a:hover {
-    background-color: var(--hover-bg);
-    color: var(--hover-color);
-    padding: 5px 10px; /* Add padding to highlight hover state */
-    border-radius: 5px;
+/* Footer navigation */
+.footer-nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 10px;
+    font-size: 0.9rem;
+}
+
+footer {
+    margin-top: 40px;
+    padding: 20px 0;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+/* Styling the footer text */
+footer p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Adding responsive design for mobile */
+@media (max-width: 768px) {
+    .main-nav ul, .footer-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-nav li, .footer-nav li {
+        margin-bottom: 10px;
+    }
 }
