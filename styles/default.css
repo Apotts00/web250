@@ -12,6 +12,10 @@ header {
     width: 100%; /* Make the header span the full width */
 }
 
+body {
+  background-image: url("ladybug.png");
+}
+
 nav {
     font-size: 1.5625rem;
     text-align: center;
