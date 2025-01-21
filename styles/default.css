@@ -7,7 +7,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #4CAF50;
     color: #333;
     line-height: 1.6;
     padding: 20px;
@@ -45,7 +45,7 @@ ul {
 
 a {
     text-decoration: none;
-    color: #333;
+    color: #4CAF50;
     padding: 8px 16px;
     margin: 0 8px;
 }
