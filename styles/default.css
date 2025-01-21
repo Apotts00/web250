@@ -13,7 +13,8 @@ header {
 }
 
 body {
-  background-image: url("images/ladybug2.jpg");
+    background-image: url("images/ladybug2.jpg");
+    background-color: #65FF00;
 }
 
 nav {
