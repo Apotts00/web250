@@ -9,7 +9,7 @@ header {
     text-decoration: none;
     padding: 20px;
     background-color: var(--primary-bg); /* Ensure it has the same background as body */
-    width: 100%; /* Make the header span the full width */
+    max-width: 100%; /* Make the header span the full width */
 }
 
 body {
