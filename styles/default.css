@@ -1,8 +1,15 @@
 /* Reset some basic elements for better styling */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Create three equal columns that float next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 body {
@@ -117,4 +124,11 @@ footer p {
     footer p {
         font-size: 0.9rem; /* Smaller text on mobile */
     }
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other on smaller screens (600px wide or less) */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
 }
