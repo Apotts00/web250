@@ -7,18 +7,16 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4; /* Light background color */
+    background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
     padding: 20px;
     display: grid;
-    grid-template-columns: 1fr 3fr; /* Left navigation (1fr) and content (3fr) */
-    grid-template-rows: auto 1fr auto; /* Auto height for header and footer, 1fr for content */
     gap: 20px; /* Space between grid items */
 }
 
 header {
-    grid-column: 1 / span 2; /* Header spans both columns */
+    grid-column: 1 / span 2; 
     background-color: #4CAF50;
     color: white;
     text-align: center;
@@ -44,7 +42,7 @@ nav a:hover {
 
 main {
     display: grid;
-    grid-template-columns: 2fr 1fr; /* Main content takes 2/3 of the width, sidebar takes 1/3 */
+    grid-template-columns: 2fr 1fr; 
     gap: 20px;
 }
 
