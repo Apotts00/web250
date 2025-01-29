@@ -7,24 +7,33 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #af814c;
+    background-color: #f2bc1b;
     color: #333;
     line-height: 1.6;
+    display: flex; /* Use Flexbox to center content */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     padding: 20px;
-    display: grid;
-    gap: 20px; /* Space between grid items */
+    text-align: left;
 }
 
 header {
-    grid-column: 1 / span 2; 
-    background-color: #4CAF50;
+    background-color: #000205;
     color: white;
-    text-align: center;
     padding: 20px;
+    min-width: 100%;
+    text-align: center;
 }
 
 h1 {
     font-size: 2.5rem;
+    text-align: center;
+}
+h2 {
+    font-size: 1.5rem;
+    text-align: center;
 }
 
 nav a {
@@ -32,52 +41,39 @@ nav a {
     color: #fff;
     padding: 8px 16px;
     margin: 0 8px;
+    text-align: center;
 }
 
 nav a:hover {
-    background-color: #333;
-    color: white;
-    border-radius: 5px;
-}
-
-main {
-    display: grid;
-    grid-template-columns: 2fr 1fr; 
-    gap: 20px;
-}
-
-article {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-nav ul {
-    list-style-type: none;
-}
-
-nav ul li {
-    margin-bottom: 10px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #333;
-    padding: 8px;
-    display: block;
-}
-
-nav ul li a:hover {
     background-color: #4CAF50;
     color: white;
     border-radius: 5px;
 }
 
-footer {
-    grid-column: 1 / span 2; /* Footer spans both columns */
+main {
+    width: 100%;
+    max-width: 800px; /* Limit the width */
+    padding: 20px;
+}
+
+figure {
+    margin: 20px auto;
     text-align: center;
-    padding: 20px 0;
-    background-color: #333;
+}
+
+footer {
+    background-color: #000205;
     color: white;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
