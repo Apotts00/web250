@@ -1,5 +1,5 @@
-/* Reset some basic elements for better styling */
-* {
+
+HTML {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,7 +10,7 @@ body {
     background-color: #f2bc1b;
     color: #333;
     line-height: 1.6;
-    display: flex; /* Use Flexbox to center content */
+    display: flex; 
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -51,7 +51,7 @@ nav a:hover {
 }
 
 main {
-    width: 100%;
+    min-width: 100%;
     max-width: 800px; /* Limit the width */
     padding: 20px;
 }
@@ -65,7 +65,7 @@ footer {
     background-color: #000205;
     color: white;
     padding: 20px;
-    width: 100%;
+    min-width: 100%;
     text-align: center;
 }
 
