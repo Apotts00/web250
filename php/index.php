@@ -11,7 +11,7 @@
 <body>
 	<h2>Home</h2>
     <!-- Sectioning elements -->
-  <div data-include="components/header.html"></div>
+  <div <?php include('components/header.php'); ?>></div>
 	<figure>
    <img src="images/ladylove.png" alt="Beautiful Me ;-)" width="300" height="300">
    <figcaption><em>Charlotte, NC ❤️</em></figcaption>
@@ -26,7 +26,7 @@
 	To learn more about the owner, please check out my <a href="introduction.html">introduction</a>&nbsp;page. 
 	</p>   
 	
- <div data-include="components/footer.html"></div>
+ <div <?php include('components/footer.php'); ?>></div>
 	<script src="scripts/HTMLInclude.js"></script>
 	
 </body>
