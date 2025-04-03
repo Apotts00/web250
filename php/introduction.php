@@ -9,7 +9,7 @@
 	<script src="https://lint.page/kit/67ff88.js" crossorigin="anonymous"></script>
  </head>
 <body>
-<div data-include="components/header.html"></div>
+<div <?php include('components/header.php'); ?>></div>>
 <main>
 	<h2>About The Owner</h2>
   <figure>
@@ -43,7 +43,7 @@
     <li><strong>I'd also like to share:</strong> I recently got married, and my new legal name is Adrienne Love! </li>
 </ul>
 </main>
-	<div data-include="components/footer.html"></div>
+	<div <?php include('components/footer.php'); ?>></div>
 	<script src="scripts/HTMLInclude.js"></script>
 	</body>
 </html>
