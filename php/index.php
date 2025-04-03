@@ -9,9 +9,9 @@
 	<script src="https://lint.page/kit/880bd5.js" crossorigin="anonymous"></script>
 </head>
 <body>
-	<h2>Home</h2>
-    <!-- Sectioning elements -->
-  <div <?php include('components/header.php'); ?>></div>
+	 <div <?php include('components/header.php'); ?>></div>	<h2>Home</h2>
+<main>
+	<h2>HOME</h2>
 	<figure>
    <img src="images/ladylove.png" alt="Beautiful Me ;-)" width="300" height="300">
    <figcaption><em>Charlotte, NC ❤️</em></figcaption>
@@ -25,10 +25,8 @@
 	Together, we empower individuals to grow, connect, and thrive in an atmosphere of creativity and collaboration."
 	To learn more about the owner, please check out my <a href="introduction.html">introduction</a>&nbsp;page. 
 	</p>   
-	
- <div <?php include('components/footer.php'); ?>></div>
-	<script src="scripts/HTMLInclude.js"></script>
-	
+</main>	
+	<div <?php include('components/footer.php'); ?>></div>
 </body>
 </html>
 
