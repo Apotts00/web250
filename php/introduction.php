@@ -44,6 +44,5 @@
 </ul>
 </main>
 	<div <?php include('components/footer.php'); ?>></div>
-	<script src="scripts/HTMLInclude.js"></script>
 	</body>
 </html>
