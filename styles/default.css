@@ -4,6 +4,7 @@ HTML {
     padding: 0;
     box-sizing: border-box;
     min-width: 100px;
+    min-height: 100px;
 }
 
 body {
