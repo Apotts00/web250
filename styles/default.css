@@ -13,6 +13,7 @@ body {
 }
 
 header, footer {
+    box-sizing: border-box;
     background-color: #000205;
     color: white;
     padding: 5px 5px;
