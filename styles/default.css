@@ -1,26 +1,17 @@
 
-HTML {
-    margin: 0 auto;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-}
-
 body {
     font-family: Arial, sans-serif;
     background-color: #f2bc1b;
     color: #333;
     line-height: 1.6;
-    display: flex; 
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100%;
-    padding: 20px;
+    margin: 0 auto;
     text-align: left;
+    padding: 0;
+    width: 100%;
+    height: 100%;
 }
 
-header {
+header, footer {
     background-color: #000205;
     color: white;
     padding: 20px;
@@ -39,9 +30,10 @@ h2 {
 a {
     color: #FFFFFF;
     border-radius: 5px;
+    text-decoration: none;
 }
 nav a {
-    text-decoration: none;
+    
     color: #fff;
     padding: 8px 16px;
     margin: 0 8px;
@@ -56,28 +48,11 @@ nav a:hover {
 
 main {
     min-width: 100%;
-    max-width: 800px; /* Limit the width */
+    max-width: 800px; 
     padding: 20px;
 }
 
 figure {
     margin: 20px auto;
     text-align: center;
-}
-
-footer {
-    background-color: #000205;
-    color: white;
-    padding: 20px;
-    min-width: 100%;
-    text-align: center;
-}
-
-footer a {
-    color: white;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
 }
