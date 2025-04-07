@@ -9,7 +9,7 @@
  <script src="https://lint.page/kit/67ff88.js" crossorigin="anonymous"></script>
  </head>
 <body>
-<div <?php include('components/header.php'); ?>></div>
+<?php include 'components/header.html' ?>
     <!-- Main Section -->
     <main>
         <h2>Course Contract</h2>
@@ -30,6 +30,6 @@
             Signed: <em>Adrienne Love, 13 January 2025</em>
         </p>
     </main>
-<div <?php include('components/header.php'); ?>></div>
+<?php include 'components/footer.html' ?>
 </body>
 </html>
