@@ -9,7 +9,8 @@
 	<script src="https://lint.page/kit/880bd5.js" crossorigin="anonymous"></script>
 </head>
 <body>
-	 <div <?php include('components/header.php'); ?>></div>	<h2>Home</h2>
+	 <?php include 'components/header.html' ?>
+	<h2>Home</h2>
 <main>
 	<h2>HOME</h2>
 	<figure>
@@ -26,7 +27,7 @@
 	To learn more about the owner, please check out my <a href="introduction.html">introduction</a>&nbsp;page. 
 	</p>   
 </main>	
-	<div <?php include('components/footer.php'); ?>></div>
+	<?php include 'components/footer.html' ?>
 </body>
 </html>
 
