@@ -10,7 +10,7 @@
 
 
 	<a href = "index.php"  >
-		<img class = "linkedimage" src = "images/sdp_banner.png" alt = "Super Duper Paratrooper" />
+		<img class = "linkedimage" src = "images/para.png" alt = "Super Duper Paratrooper" />
 	</a>
 	<br />
 	
