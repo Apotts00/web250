@@ -23,24 +23,33 @@
 	<script src="https://lint.page/kit/880bd5.js" crossorigin="anonymous"></script>
 </head>
 <body>
-	 <?php include 'components/header.html' ?>
-	<h2>Home</h2>
+	<header>
+<h1>Adrienne Love's Ambitious Ladybug 🐞 WEB250 🐞 Static Site</h1>
+
+<nav>
+  <ul class="nav-menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="introduction.html">Introduction</a></li>
+    <li><a href="contract.html">Contract</a></li>
+    <li><a href="http://alove.great-site.net//">PHP Site</a></li>
+    <li class="dropdown">
+      
+      <a href="#">External Pages</a>
+      <ul class="dropdown-menu">
+        <li><a href="multipage_sites/superduper_static/index.htm">Superduper Static</a></li>
+        <li><a href="http://alove.great-site.net/multipage_sites/superduper_php/">Superduper PHP</a></li>
+        <li><a href="joyofphp/src/">Joy of PHP</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+</header>
 <main>
-	<h2>HOME</h2>
-	<figure>
-   <img src="images/lover.png" alt="Beautiful Me ;-)" width="300" height="300">
-   <figcaption><em>Charlotte, NC ❤️</em></figcaption>
-   </figure>
-        <p>Enjoy Learning About Me!!!</p>
-    
-	<p>
-	Our mission is to create a dynamic and fun learning environment by partnering with business owners to offer engaging, 
-	interactive classes that inspire and educate the public. We’re dedicated to blending knowledge with excitement, 
-	cultivating a positive vibe where learning is not only impactful but enjoyable.
-	Together, we empower individuals to grow, connect, and thrive in an atmosphere of creativity and collaboration."
-	To learn more about the owner, please check out my <a href="introduction.html">introduction</a>&nbsp;page. 
-	</p>   
-</main>	
+    <!-- Load page content from selected file -->
+    <h2><?php echo strtoupper($pageTitle)?></h2> 
+    <?php include($pagePath)?>
+</main>
 	<?php include 'components/footer.html' ?>
 </body>
 </html>
