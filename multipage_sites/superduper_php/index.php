@@ -1,8 +1,17 @@
+<?php
+	if (isset($_GET["p"])) {
+		$sPage = $_GET["p"];
+	} else {
+		$sPage = "home";
+	}
+	
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
 	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-	<title>super duper paratrooper page</title>
+	<title>super duper paratrooper page - <?= ucfirst($sPage) ?></title>
 	<link rel = "stylesheet" type = "text/css" href = "styles.css" />
 </head>
 <body>
@@ -14,12 +23,12 @@
 	</a>
 	<br />
 	
-	<a href = "?p=home.php">home</a> | 
-	<a href = "?p=alpha.php">alpha</a> | 
-	<a href = "?p=bravo.php">bravo</a> | 
-	<a href = "?p=charlie.php">charlie</a> | 
-	<a href = "?p=delta.php">delta</a> | 
-	<a href = "?p=echo.php">echo</a>
+	<a href = "?p=home">home</a> | 
+	<a href = "?p=alpha">alpha</a> | 
+	<a href = "?p=bravo">bravo</a> | 
+	<a href = "?p=charlie">charlie</a> | 
+	<a href = "?p=delta">delta</a> | 
+	<a href = "?p=echo">echo</a>
 
 
 
@@ -28,11 +37,7 @@
 <!-- dynamic content goes here -->
 
 <?php
-	$sPage = $_GET["p"];
-	//echo ("You picked the page: " . $sPage); 
-	
-	if($sPage == "") {  $sPage = "home.php"; }
-	include($sPage);
+	include($sPage) . ".php"
 ?>
 
 
