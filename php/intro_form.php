@@ -6,6 +6,7 @@
     <link href="styles/default.css" rel="stylesheet" type="text/css">
     <title>Your Introduction</title>
     <link rel="icon" type="image/x-icon" href="images/favicon2.png">
+    <script src="https://lint.page/kit/67ff88.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <div data-include="components/header.html"></div>
