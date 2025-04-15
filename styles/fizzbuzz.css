@@ -1,17 +1,20 @@
-h3 {
+        h3 {
             color: #333;
+            text-align: center;
         }
 
         form {
             display: flex;
             flex-direction: column;
             gap: 10px;
-            width: 250px;
+            width: 100%;
+            max-width: 500px;
             margin: 0 auto;
         }
 
         label {
             margin-right: 10px;
+            width: 120px;
         }
 
         input, button {
@@ -45,22 +48,32 @@ h3 {
             padding-left: 0;
         }
 
-        section {
+        /* Flexbox Layout for Rows */
+        .row {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
         }
 
-        section input {
+        .row input {
+            width: calc(33% - 10px);
+        }
+
+        /* Adjustments for the last row (Divisors) */
+        .row.divisors input {
+            width: calc(33% - 10px);
+        }
+
+        .row.full-width input {
             width: 100%;
         }
 
-        section.name-fields {
+        /* Inline name fields */
+        .row.name-fields {
             display: flex;
             justify-content: space-between;
-            gap: 10px;
         }
 
-        section.name-fields input {
-            width: 48%; 
+        .row.name-fields input {
+            width: 48%;
         }
