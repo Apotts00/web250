@@ -1,4 +1,4 @@
-<script>
+
         document.getElementById('fizzBuzzForm').addEventListener('submit', function(event) {
             event.preventDefault();
 
