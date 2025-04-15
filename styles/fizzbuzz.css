@@ -48,7 +48,6 @@
             padding-left: 0;
         }
 
-        /* Flexbox Layout for Rows */
         .row {
             display: flex;
             flex-wrap: wrap;
@@ -57,23 +56,4 @@
 
         .row input {
             width: calc(33% - 10px);
-        }
-
-        /* Adjustments for the last row (Divisors) */
-        .row.divisors input {
-            width: calc(33% - 10px);
-        }
-
-        .row.full-width input {
-            width: 100%;
-        }
-
-        /* Inline name fields */
-        .row.name-fields {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .row.name-fields input {
-            width: 48%;
         }
