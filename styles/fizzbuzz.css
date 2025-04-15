@@ -1,24 +1,30 @@
 h3 {
             color: #333;
         }
+
         form {
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column;
             gap: 10px;
-            justify-content: flex-start;
+            width: 250px;
+            margin: 0 auto;
         }
+
         label {
             margin-right: 10px;
         }
+
         input, button {
             padding: 5px;
             font-size: 1rem;
             border: 1px solid #ddd;
             border-radius: 4px;
         }
+
         input {
-            width: 200px;
+            width: 100%;
         }
+
         button {
             padding: 10px 15px;
             background-color: #28a745;
@@ -27,12 +33,34 @@ h3 {
             border-radius: 4px;
             cursor: pointer;
         }
+
         button:hover {
             background-color: #218838;
         }
+
         ul {
             margin-top: 20px;
             font-size: 1.1rem;
             list-style: none;
             padding-left: 0;
+        }
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        section input {
+            width: 100%;
+        }
+
+        section.name-fields {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        section.name-fields input {
+            width: 48%; 
         }
