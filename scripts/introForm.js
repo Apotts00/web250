@@ -25,7 +25,7 @@ document.getElementById('introForm').addEventListener('submit', function (event)
     document.getElementById('academicDisplay').textContent = userData.academic;
     document.getElementById('subjectBackgroundDisplay').textContent = userData.subjectBackground;
     document.getElementById('platformDisplay').textContent = userData.platform;
-    document.getElementById('coursesDisplay').innerHTML = userData.courses.split('\n').map(course => `<li>${course}</li>`).join('');
+    document.getElementById('coursesDisplay').innerHTML = userData.courses.split('\n').map((course) => `<li>${course}</li>`).join('');
     document.getElementById('funnyDisplay').textContent = userData.funny;
     document.getElementById('otherDisplay').textContent = userData.other;
 
