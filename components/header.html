@@ -7,7 +7,7 @@
     <li><a href="introduction.html">Introduction</a></li>
     <li><a href="contract.html">Contract</a></li>
     <li><a href="http://alove.great-site.net//">PHP Site</a></li>
-    <li><a href="intro_html">Intro Form</a></li>
+    <li><a href="intro_form.html">Intro Form</a></li>
     <li class="dropdown">
       
       <a href="#">External Pages</a>
