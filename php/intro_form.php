@@ -89,7 +89,7 @@
 <script src="scripts/HTMLInclude.js"></script>
 
 <script>
-    // Handle form submission and display intro content dynamically
+    
     document.getElementById('introForm').addEventListener('submit', function (event) {
         event.preventDefault();
 
@@ -106,11 +106,11 @@
             other: document.getElementById('other').value,
         };
 
-        // Hide the form and display the introduction
+
         document.getElementById('formSection').style.display = 'none';
         document.getElementById('introSection').style.display = 'block';
 
-        // Update intro content with the user's data
+        
         document.getElementById('locationDisplay').textContent = userData.location;
         document.getElementById('personalBackgroundDisplay').textContent = userData.personalBackground;
         document.getElementById('professionalDisplay').textContent = userData.professional;
@@ -120,6 +120,8 @@
         document.getElementById('coursesDisplay').innerHTML = userData.courses.split('\n').map(course => `<li>${course}</li>`).join('');
         document.getElementById('funnyDisplay').textContent = userData.funny;
         document.getElementById('otherDisplay').textContent = userData.other;
+
+        let coursesList = userData.courses.split('\n').map(course => `<li>${course}</li>`).join('');
     });
 </script>
 </body>
