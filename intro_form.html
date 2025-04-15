@@ -57,8 +57,8 @@
             </fieldset>
         </form>
     </div>
-
-    <!-- Introduction Section (this will be populated after form submission) -->
+<script src="scripts/introForm.js"></script>
+   
     <div id="introSection" style="display: none;">
         <h2>About The Owner</h2>
         <figure>
@@ -88,39 +88,5 @@
 <div data-include="components/footer.html"></div>
 <script src="scripts/HTMLInclude.js"></script>
 
-<script>
-    // Handle form submission and display intro content dynamically
-    document.getElementById('introForm').addEventListener('submit', function (event) {
-        event.preventDefault();
-
-        const userData = {
-            name: document.getElementById('name').value,
-            location: document.getElementById('location').value,
-            personalBackground: document.getElementById('personalBackground').value,
-            professional: document.getElementById('professional').value,
-            academic: document.getElementById('academic').value,
-            subjectBackground: document.getElementById('subjectBackground').value,
-            platform: document.getElementById('platform').value,
-            courses: document.getElementById('courses').value,
-            funny: document.getElementById('funny').value,
-            other: document.getElementById('other').value,
-        };
-
-        // Hide the form and display the introduction
-        document.getElementById('formSection').style.display = 'none';
-        document.getElementById('introSection').style.display = 'block';
-
-        // Update intro content with the user's data
-        document.getElementById('locationDisplay').textContent = userData.location;
-        document.getElementById('personalBackgroundDisplay').textContent = userData.personalBackground;
-        document.getElementById('professionalDisplay').textContent = userData.professional;
-        document.getElementById('academicDisplay').textContent = userData.academic;
-        document.getElementById('subjectBackgroundDisplay').textContent = userData.subjectBackground;
-        document.getElementById('platformDisplay').textContent = userData.platform;
-        document.getElementById('coursesDisplay').innerHTML = userData.courses.split('\n').map(course => `<li>${course}</li>`).join('');
-        document.getElementById('funnyDisplay').textContent = userData.funny;
-        document.getElementById('otherDisplay').textContent = userData.other;
-    });
-</script>
 </body>
 </html>
