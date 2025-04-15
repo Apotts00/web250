@@ -1,5 +1,5 @@
 
-    document.getElementById('fizzBuzzForm').addEventListener('submit', function(event) {
+   document.getElementById('fizzBuzzForm').addEventListener('submit', function(event) {
         event.preventDefault();
 
         const firstName = document.getElementById('firstName').value;
