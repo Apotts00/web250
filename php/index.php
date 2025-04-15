@@ -1,3 +1,17 @@
+<?php
+    // get filename of the page + name of page to append to tile tag
+    if (isset( $_GET["p"])) 
+    {
+        $pageFileName = $_GET["p"] . ".html";
+        $pageTitle = ucfirst($_GET["p"]);
+    }
+    else
+    {
+        $pageFileName = "home.html";
+        $pageTitle = 'Home';
+    }
+    $pagePath = "contents/$pageFileName";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head> 
