@@ -1,78 +1,121 @@
-/* General page styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 2rem auto;
-    max-width: 900px;
-    padding: 1rem;
-    background-color: #f8f8f8;
-    color: #333;
+/* Reset & base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-h1 {
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Header & Footer */
+header, footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
     text-align: center;
-    color: #444;
+}
+
+footer p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Main Content Layout */
+main {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+/* Titles */
+h1 {
+    font-size: 2rem;
+    color: #f7c325;
 }
 
 h2 {
-    margin-top: 2rem;
-    border-bottom: 2px solid #ccc;
-    padding-bottom: 0.5rem;
+    margin-top: 20px;
+    color: #333;
 }
 
-/* Table styling */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 1rem;
-    background-color: white;
+h3.confirmation {
+    color: green;
+    margin-bottom: 20px;
 }
 
-th, td {
-    padding: 12px;
-    border: 1px solid #ccc;
-    text-align: left;
-}
-
-th {
-    background-color: #f2f2f2;
-}
-
-/* Form styling */
+/* Form Styles */
 form {
-    background-color: #ffffff;
-    padding: 1rem;
-    margin-top: 2rem;
+    margin-bottom: 30px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form button {
+    padding: 10px;
+    margin: 5px;
+    font-size: 1rem;
+}
+
+form input, form button {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-form input[type="text"],
-form input[type="number"] {
-    width: 100%;
-    padding: 8px;
-    margin: 6px 0 12px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-form input[type="submit"] {
-    background-color: #28a745;
+form button {
+    background-color: #333;
     color: white;
-    padding: 10px 16px;
-    border: none;
-    border-radius: 4px;
     cursor: pointer;
 }
 
-form input[type="submit"]:hover {
-    background-color: #218838;
+form button:hover {
+    background-color: #555;
 }
 
-/* Success message */
-p.success {
-    color: #155724;
-    background-color: #d4edda;
-    padding: 10px;
-    border-left: 5px solid #28a745;
-    margin-bottom: 1rem;
+/* Car Table or List */
+.cars-list {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.cars-list th, .cars-list td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.cars-list tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Action Buttons */
+.btn-delete {
+    color: white;
+    background-color: red;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.btn-edit {
+    color: white;
+    background-color: #007BFF;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.btn-delete:hover, .btn-edit:hover {
+    opacity: 0.8;
 }
