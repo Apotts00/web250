@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles/default.css" rel="stylesheet" type="text/css">
-    <title>Adrienne Love 🐞 Ambitious Ladybug | Introduction Form</title>
+    <title>Adrienne Love 🐞 Ambitious Ladybug | Introduction</title>
     <link rel="icon" type="image/x-icon" href="images/favicon2.png">
     <script src="https://lint.page/kit/67ff88.js" crossorigin="anonymous"></script>
 </head>
@@ -21,6 +21,9 @@
                 <label for="name">Full Name:</label>
                 <input type="text" id="name" name="name" value="Adrienne Love" required><br><br>
 
+                <label for="imageInput">Upload Your Photo:</label>
+                <input type="file" id="imageInput" name="profilePic" accept="image/*"><br><br> 
+               
                 <label for="location">Location:</label>
                 <input type="text" id="location" name="location" value="Charlotte, NC ❤️" required><br><br>
 
@@ -58,11 +61,17 @@
         </form>
     </div>
 <script src="scripts/introForm.js"></script>
-   
+    
     <div id="introSection" style="display: none;">
         <h2>About The Owner</h2>
         <figure>
-            <img src="images/lover.png" alt="Beautiful Me ;-)" class="center" width="300" height="300">
+            
+            
+            <img id="previewImage" src="images/lover.png" alt="Beautiful Me ;-)" class="center" width="300" height="300">
+            <img id="displayImage" src="images/lover.png" alt="Your Photo" class="center" width="300" height="300" style="display: none;">
+
+
+
             <figcaption><em id="locationDisplay">Charlotte, NC ❤️</em></figcaption>
         </figure>
         <ul>
@@ -87,6 +96,7 @@
 
 <div data-include="components/footer.html"></div>
 <script src="scripts/HTMLInclude.js"></script>
+
 
 </body>
 </html>
