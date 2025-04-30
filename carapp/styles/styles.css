@@ -1,130 +1,121 @@
+/* Reset & base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-  font-family: "Economica", serif;
-  background-color: #ebe3e1;
-  color: #1c1918;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
 }
 
-/* CONTAINER */
-.main-container {
-  width: 90%;
-  max-width: 960px;
-  background-color: #ffffff;
-  margin: 2rem auto;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 10px 20px rgba(36, 28, 26, 0.2);
+/* Header & Footer */
+header, footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
 }
 
-/* HEADINGS */
+footer p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Main Content Layout */
+main {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+/* Titles */
 h1 {
-  text-align: center;
-  font-size: 2.5em;
-  color: #451606;
-  margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #f7c325;
 }
 
 h2 {
-  color: #1c1918;
-  border-bottom: 2px solid #6e544e;
-  padding-bottom: 0.25rem;
-  margin-top: 2rem;
-  font-size: 1.75em;
+    margin-top: 20px;
+    color: #333;
 }
 
-/* TABLE STYLES */
-table {
-  width: 90%;
-  border-collapse: collapse;
-  margin-top: 1.5rem;
-  background-color: #fff;
-  box-shadow: 0 2px 6px rgba(36, 28, 26, 0.2);
+h3.confirmation {
+    color: green;
+    margin-bottom: 20px;
 }
 
-th, td {
-  padding: 12px 16px;
-  border-bottom: 1px solid #ccc;
-  text-align: left;
-}
-
-th {
-  background-color: #d9cdca;
-  color: #241c1a;
-}
-
-td {
-  background-color: #f9f4f3;
-}
-
-tr:hover {
-  background-color: #f2e7e4;
-}
-
-/* ACTION LINKS */
-a {
-  text-decoration: none;
-  color: #451606;
-}
-
-a:hover {
-  color: #993210;
-}
-
-/* FORMS */
+/* Form Styles */
 form {
-  padding: 25px;
-  margin-bottom: 1.5rem;
-  background-color: #d9cdca;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(36, 28, 26, 0.2);
-}
-
-form label {
-  display: block;
-  margin-top: 1rem;
-  margin-left: 5px;
-  font-weight: bold;
+    margin-bottom: 30px;
 }
 
 form input[type="text"],
-form input[type="number"] {
-  width: 90%;
-  height: 5%;
-  margin-top: 6px;
-  margin-left: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1em;
-  background-color: #fff;
-  color: #241c1a;
+form input[type="number"],
+form button {
+    padding: 10px;
+    margin: 5px;
+    font-size: 1rem;
 }
 
-form input[type="submit"] {
-  margin: 15px 75px;
-  padding: 10px 16px;
-  font-size: 1em;
-  background-color: #451606;
-  color: #f2e7e4;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
+form input, form button {
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-form input[type="submit"]:hover {
-  background-color: #993210;
+form button {
+    background-color: #333;
+    color: white;
+    cursor: pointer;
 }
 
-/* SUCCESS MESSAGES */
-p.success {
-  background-color: #d4edda;
-  color: #155724;
-  border-left: 5px solid #28a745;
-  padding: 10px;
-  margin-top: 1rem;
-  border-radius: 6px;
-  font-weight: bold;
+form button:hover {
+    background-color: #555;
+}
+
+/* Car Table or List */
+.cars-list {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.cars-list th, .cars-list td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.cars-list tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Action Buttons */
+.btn-delete {
+    color: white;
+    background-color: red;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.btn-edit {
+    color: white;
+    background-color: #007BFF;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.btn-delete:hover, .btn-edit:hover {
+    opacity: 0.8;
 }
