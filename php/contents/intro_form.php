@@ -21,6 +21,9 @@
                 <label for="name">Full Name:</label>
                 <input type="text" id="name" name="name" value="Adrienne Love" required><br><br>
 
+                <label for="imageInput">Upload Your Photo:</label>
+                <input type="file" id="imageInput" name="profilePic" accept="image/*"><br><br> 
+               
                 <label for="location">Location:</label>
                 <input type="text" id="location" name="location" value="Charlotte, NC ❤️" required><br><br>
 
@@ -58,11 +61,17 @@
         </form>
     </div>
 <script src="scripts/introForm.js"></script>
-    <!-- Introduction Section (this will be populated after form submission) -->
+    
     <div id="introSection" style="display: none;">
         <h2>About The Owner</h2>
         <figure>
-            <img src="images/lover.png" alt="Beautiful Me ;-)" class="center" width="300" height="300">
+            
+            
+            <img id="previewImage" src="images/lover.png" alt="Beautiful Me ;-)" class="center" width="300" height="300">
+            <img id="displayImage" src="images/lover.png" alt="Your Photo" class="center" width="300" height="300" style="display: none;">
+
+
+
             <figcaption><em id="locationDisplay">Charlotte, NC ❤️</em></figcaption>
         </figure>
         <ul>
