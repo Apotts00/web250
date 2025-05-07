@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
         coursesDisplay.innerHTML = ""; // Clear previous
 
         const courseInputs = form.querySelectorAll("input[name='courses[]']");
-        courseInputs.forEach(input => {
+        courseInputs.forEach((input) => {
             const [courseId, ...rest] = input.value.split(":");
             const reason = rest.join(":").trim();
             const li = document.createElement("li");
