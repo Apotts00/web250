@@ -51,15 +51,36 @@ I am new to this subject. No prior experience.</textarea
           <label for="platform">Primary Computer Platform:</label>
           <input type="text" id="platform" name="platform" value="Windows 10 Laptop" required /><br /><br />
 
-          <label for="courses">Courses I'm Taking and Why:</label>
-          <div id="coursesContainer">
-            <div class="courseField">
-              <input type="text" name="courseName" value="CSC221- Advanced Python Programming" />
-              <input type="text" name="courseReason" value="It is required for my degree program, lol" />
-              <button type="button" class="removeCourseBtn">Remove</button>
-            </div>
-          </div>
-          <button type="button" id="addCourseBtn">Add Course</button><br /><br />
+          <fieldset id="courseList" class="course-list">
+  <legend>Courses I'm Taking and Why:</legend>
+  <!-- existing courses -->
+  <input
+    type="text"
+    name="courses[]"
+    value="CSC221- Advanced Python Programming: It is required for my degree program, lol"
+    class="course-input"
+  >
+  <input
+    type="text"
+    name="courses[]"
+    value="CTS240- Project Management: It is required for my degree program, lol"
+    class="course-input"
+  >
+  <input
+    type="text"
+    name="courses[]"
+    value="WEB215- Advanced Web Markup and Scripting: It is required for my degree program, lol"
+    class="course-input"
+  >
+  <input
+    type="text"
+    name="courses[]"
+    value="WEB250 - Database Driven Websites: It is required for my degree program, lol"
+    class="course-input"
+  >
+  <button type="button" id="add-course-btn" class="add-course">Add Course</button>
+</fieldset>
+
 
           <label for="funny">Funny/Interesting Item:</label>
           <textarea id="funny" name="funny" required>
