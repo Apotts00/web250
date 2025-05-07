@@ -1,33 +1,91 @@
-document.getElementById('introForm').addEventListener('submit', function (event) {
-    event.preventDefault();
 
-    const userData = {
-        name: document.getElementById('name').value,
-        location: document.getElementById('location').value,
-        personalBackground: document.getElementById('personalBackground').value,
-        professional: document.getElementById('professional').value,
-        academic: document.getElementById('academic').value,
-        subjectBackground: document.getElementById('subjectBackground').value,
-        platform: document.getElementById('platform').value,
-        courses: document.getElementById('courses').value,
-        funny: document.getElementById('funny').value,
-        other: document.getElementById('other').value
-    };
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.getElementById("introForm");
+      const formSection = document.getElementById("formSection");
+      const introSection = document.getElementById("introSection");
+      const coursesContainer = document.getElementById("coursesContainer");
+      const addCourseBtn = document.getElementById("addCourseBtn");
+      const resetBtn = document.getElementById("resetBtn");
 
-    // Hide the form and display the intro section
-    document.getElementById('formSection').style.display = 'none';
-    document.getElementById('introSection').style.display = 'block';
+      function addCourseField(name = "", reason = "") {
+        const div = document.createElement("div");
+        div.classList.add("courseField");
 
-    // Update the content of the intro page with user data
-    document.getElementById('locationDisplay').textContent = userData.location;
-    document.getElementById('personalBackgroundDisplay').textContent = userData.personalBackground;
-    document.getElementById('professionalDisplay').textContent = userData.professional;
-    document.getElementById('academicDisplay').textContent = userData.academic;
-    document.getElementById('subjectBackgroundDisplay').textContent = userData.subjectBackground;
-    document.getElementById('platformDisplay').textContent = userData.platform;
-    document.getElementById('coursesDisplay').innerHTML = userData.courses.split('\n').map((course) => `<li>${course}</li>`).join('');
-    document.getElementById('funnyDisplay').textContent = userData.funny;
-    document.getElementById('otherDisplay').textContent = userData.other;
+        const nameInput = document.createElement("input");
+        nameInput.type = "text";
+        nameInput.name = "courseName";
+        nameInput.value = name;
 
-    let coursesList = userData.courses.split('\n').map((course) => `<li>${course}</li>`).join('');
-});
+        const reasonInput = document.createElement("input");
+        reasonInput.type = "text";
+        reasonInput.name = "courseReason";
+        reasonInput.value = reason;
+
+        const removeBtn = document.createElement("button");
+        removeBtn.type = "button";
+        removeBtn.textContent = "Remove";
+        removeBtn.className = "removeCourseBtn";
+        removeBtn.addEventListener("click", () => div.remove());
+
+        div.appendChild(nameInput);
+        div.appendChild(reasonInput);
+        div.appendChild(removeBtn);
+
+        coursesContainer.appendChild(div);
+      }
+
+      addCourseBtn.addEventListener("click", () => addCourseField());
+
+      resetBtn.addEventListener("click", () => {
+        form.reset();
+        coursesContainer.innerHTML = "";
+        addCourseField("CSC221- Advanced Python Programming", "It is required for my degree program, lol");
+        introSection.style.display = "none";
+        formSection.style.display = "block";
+      });
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        formSection.style.display = "none";
+        introSection.style.display = "block";
+
+        const fileInput = document.getElementById("imageInput");
+        const displayImage = document.getElementById("displayImage");
+        const previewImage = document.getElementById("previewImage");
+
+        if (fileInput.files.length > 0) {
+          const reader = new FileReader();
+          reader.onload = function (event) {
+            displayImage.src = event.target.result;
+            displayImage.style.display = "block";
+            previewImage.style.display = "none";
+          };
+          reader.readAsDataURL(fileInput.files[0]);
+        }
+
+        document.getElementById("locationDisplay").textContent = form.location.value;
+        document.getElementById("personalBackgroundDisplay").textContent = form.personalBackground.value;
+        document.getElementById("professionalDisplay").textContent = form.professional.value;
+        document.getElementById("academicDisplay").textContent = form.academic.value;
+        document.getElementById("subjectBackgroundDisplay").textContent = form.subjectBackground.value;
+        document.getElementById("platformDisplay").textContent = form.platform.value;
+        document.getElementById("funnyDisplay").textContent = form.funny.value;
+        document.getElementById("otherDisplay").textContent = form.other.value;
+
+        const coursesDisplay = document.getElementById("coursesDisplay");
+        coursesDisplay.innerHTML = "";
+        const courseNames = form.querySelectorAll("input[name='courseName']");
+        const courseReasons = form.querySelectorAll("input[name='courseReason']");
+
+        for (let i = 0; i < courseNames.length; i++) {
+          const li = document.createElement("li");
+          li.innerHTML = `<strong>${courseNames[i].value}</strong>: ${courseReasons[i].value}`;
+          coursesDisplay.appendChild(li);
+        }
+      });
+
+      if (coursesContainer.children.length === 0) {
+        addCourseField("CSC221- Advanced Python Programming", "It is required for my degree program, lol");
+      }
+    });
+ 
