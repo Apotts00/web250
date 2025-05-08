@@ -15,7 +15,11 @@ document.addEventListener("DOMContentLoaded", () => {
   deleteCourseBtn.id = "delete-course-btn";
   deleteCourseBtn.textContent = "Delete Last Course";
   deleteCourseBtn.className = "delete-course";
-  courseList.querySelector(".button-row")?.appendChild(deleteCourseBtn);
+  const buttonRow = courseList.querySelector(".button-row");
+if (buttonRow) {
+  buttonRow.appendChild(deleteCourseBtn);
+}
+
 
   // Preview uploaded image
   imageInput.addEventListener("change", (e) => {
