@@ -7,10 +7,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const formSection = document.getElementById("formSection");
   const introSection = document.getElementById("introSection");
   const addCourseBtn = document.getElementById("add-course-btn");
-  const deleteCourseBtn = document.getElementById("delete-course-btn");
   const courseList = document.getElementById("courseList");
 
-  // Show uploaded image
+  // Dynamically create Delete Course button
+  const deleteCourseBtn = document.createElement("button");
+  deleteCourseBtn.type = "button";
+  deleteCourseBtn.id = "delete-course-btn";
+  deleteCourseBtn.textContent = "Delete Last Course";
+  deleteCourseBtn.className = "delete-course";
+  courseList.appendChild(deleteCourseBtn);
+
+  // Image preview
   imageInput.addEventListener("change", (e) => {
     const file = e.target.files[0];
     if (file) {
@@ -24,17 +31,17 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Add new course field
+  // Add course field
   addCourseBtn.addEventListener("click", () => {
     const input = document.createElement("input");
     input.type = "text";
     input.name = "courses[]";
     input.placeholder = "New Course: Reason";
     input.classList.add("course-input");
-    courseList.insertBefore(input, addCourseBtn.parentElement);
+    courseList.insertBefore(input, addCourseBtn);
   });
 
-  // Delete last course field if more than one exists
+  // Delete last course field
   deleteCourseBtn.addEventListener("click", () => {
     const courseInputs = courseList.querySelectorAll("input.course-input");
     if (courseInputs.length > 1) {
@@ -44,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Handle form submit
+  // Submit form
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -66,17 +73,37 @@ document.addEventListener("DOMContentLoaded", () => {
     const courses = form.querySelectorAll("input[name='courses[]']");
     courses.forEach((course) => {
       const li = document.createElement("li");
-      li.textContent = course.value;
+      const strong = document.createElement("strong");
+      strong.textContent = course.value;
+      li.appendChild(strong);
       coursesDisplay.appendChild(li);
     });
+
+    // Add a reset button below the generated intro
+    if (!document.getElementById("resetIntroBtn")) {
+      const resetIntroBtn = document.createElement("button");
+      resetIntroBtn.id = "resetIntroBtn";
+      resetIntroBtn.textContent = "Edit My Info";
+      resetIntroBtn.className = "edit-info-btn";
+      resetIntroBtn.style.marginTop = "20px";
+      introSection.appendChild(resetIntroBtn);
+
+      resetIntroBtn.addEventListener("click", () => {
+        form.reset();
+        previewImage.style.display = "block";
+        displayImage.style.display = "none";
+        introSection.style.display = "none";
+        formSection.style.display = "block";
+      });
+    }
   });
 
-  // Reset form and display
+  // Reset button (top form)
   resetBtn.addEventListener("click", () => {
     form.reset();
     previewImage.style.display = "block";
     displayImage.style.display = "none";
-    formSection.style.display = "block";
     introSection.style.display = "none";
+    formSection.style.display = "block";
   });
 });
