@@ -79,7 +79,7 @@ if (buttonRow) {
       const li = document.createElement("li");
       const strong = document.createElement("strong");
       strong.textContent = course.value;
-      li.appendChild;
+      li.appendChild(strong);
       coursesDisplay.appendChild(li);
     });
 
