@@ -7,28 +7,36 @@
   <title>Adrienne Love 🐞 Ambitious Ladybug | Introduction</title>
   <link rel="icon" type="image/x-icon" href="images/favicon2.png" />
   <script src="https://lint.page/kit/67ff88.js" crossorigin="anonymous"></script>
+  
   <style>
-    h3 {
-      text-align: center;
-    }
-    #previewImage, #displayImage {
-      display: block;
-      margin: 20px auto;
-    }
-    .course-list {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      margin-bottom: 1rem;
-    }
     .course-input {
-      width: 100%;
-    }
-    .button-row {
-      display: flex;
-      gap: 10px;
-      margin-top: 10px;
-    }
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.button-row {
+  margin-top: 10px;
+}
+
+.add-course,
+.delete-course,
+.edit-info-btn {
+  margin-right: 10px;
+  margin-top: 10px;
+  padding: 8px 14px;
+  font-weight: bold;
+}
+
+.edit-info-btn {
+  display: block;
+  margin: 20px auto;
+}
+
+h3 {
+  text-align: center;
+}
+
   </style>
 </head>
 <body>
@@ -66,18 +74,19 @@
           <label for="platform">Primary Computer Platform:</label>
           <input type="text" id="platform" name="platform" value="Windows 10 Laptop" required /><br /><br />
 
-          <fieldset id="courseList" class="course-list">
-            <legend>Courses I'm Taking and Why:</legend>
-            <input type="text" name="courses[]" value="CSC221 - Advanced Python Programming: It is required for my degree program." class="course-input" />
-            <input type="text" name="courses[]" value="CTS240 - Project Management: It is required for my degree program." class="course-input" />
-            <input type="text" name="courses[]" value="WEB215 - Advanced Web Markup and Scripting: It is required for my degree program." class="course-input" />
-            <input type="text" name="courses[]" value="WEB250 - Database Driven Websites: It is required for my degree program." class="course-input" />
+         <fieldset id="courseList" class="course-list">
+  <legend><strong>Courses I'm Taking and Why:</strong></legend>
+  <input type="text" name="courses[]" value="CSC221 - Advanced Python Programming: It is required for my degree program." class="course-input" />
+  <input type="text" name="courses[]" value="CTS240 - Project Management: It is required for my degree program." class="course-input" />
+  <input type="text" name="courses[]" value="WEB215 - Advanced Web Markup and Scripting: It is required for my degree program." class="course-input" />
+  <input type="text" name="courses[]" value="WEB250 - Database Driven Websites: It is required for my degree program." class="course-input" />
 
-            <div class="button-row">
-              <button type="button" id="add-course-btn">Add Course</button>
-              <button type="button" id="delete-course-btn">Delete Course</button>
-            </div>
-          </fieldset>
+  <div class="button-row">
+    <button type="button" id="add-course-btn" class="add-course">Add Course</button>
+    <!-- JS will insert Delete button here -->
+  </div>
+</fieldset>
+
 
           <label for="funny">Funny/Interesting Item:</label>
           <textarea id="funny" name="funny" required>I am the most introverted extrovert you will ever meet. 🙃</textarea><br /><br />
