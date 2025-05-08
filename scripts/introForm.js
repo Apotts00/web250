@@ -9,15 +9,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const addCourseBtn = document.getElementById("add-course-btn");
   const courseList = document.getElementById("courseList");
 
-  // Dynamically create Delete Course button
+  // Create and insert Delete Course button
   const deleteCourseBtn = document.createElement("button");
   deleteCourseBtn.type = "button";
   deleteCourseBtn.id = "delete-course-btn";
   deleteCourseBtn.textContent = "Delete Last Course";
   deleteCourseBtn.className = "delete-course";
-  courseList.appendChild(deleteCourseBtn);
+  courseList.querySelector(".button-row")?.appendChild(deleteCourseBtn);
 
-  // Image preview
+  // Preview uploaded image
   imageInput.addEventListener("change", (e) => {
     const file = e.target.files[0];
     if (file) {
@@ -31,17 +31,17 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Add course field
+  // Add course input
   addCourseBtn.addEventListener("click", () => {
     const input = document.createElement("input");
     input.type = "text";
     input.name = "courses[]";
     input.placeholder = "New Course: Reason";
     input.classList.add("course-input");
-    courseList.insertBefore(input, addCourseBtn);
+    courseList.insertBefore(input, courseList.querySelector(".button-row"));
   });
 
-  // Delete last course field
+  // Delete course input
   deleteCourseBtn.addEventListener("click", () => {
     const courseInputs = courseList.querySelectorAll("input.course-input");
     if (courseInputs.length > 1) {
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Submit form
+  // Form submission
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -70,8 +70,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const coursesDisplay = document.getElementById("coursesDisplay");
     coursesDisplay.innerHTML = "";
 
-    const courses = form.querySelectorAll("input[name='courses[]']");
-    courses.forEach((course) => {
+    const courseInputs = form.querySelectorAll("input[name='courses[]']");
+    courseInputs.forEach((course) => {
       const li = document.createElement("li");
       const strong = document.createElement("strong");
       strong.textContent = course.value;
@@ -79,13 +79,12 @@ document.addEventListener("DOMContentLoaded", () => {
       coursesDisplay.appendChild(li);
     });
 
-    // Add a reset button below the generated intro
+    // Add "Edit Info" reset button
     if (!document.getElementById("resetIntroBtn")) {
       const resetIntroBtn = document.createElement("button");
       resetIntroBtn.id = "resetIntroBtn";
       resetIntroBtn.textContent = "Edit My Info";
       resetIntroBtn.className = "edit-info-btn";
-      resetIntroBtn.style.marginTop = "20px";
       introSection.appendChild(resetIntroBtn);
 
       resetIntroBtn.addEventListener("click", () => {
@@ -98,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Reset button (top form)
+  // Top reset button
   resetBtn.addEventListener("click", () => {
     form.reset();
     previewImage.style.display = "block";
