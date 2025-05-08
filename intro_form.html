@@ -6,19 +6,41 @@
   <link href="styles/default.css" rel="stylesheet" type="text/css" />
   <title>Adrienne Love 🐞 Ambitious Ladybug | Introduction</title>
   <link rel="icon" type="image/x-icon" href="images/favicon2.png" />
-  <script src="https://lint.page/kit/67ff88.js" crossorigin="anonymous"></script>
+  <style>
+    h3 {
+      text-align: center;
+    }
+    #previewImage, #displayImage {
+      display: block;
+      margin: 20px auto;
+    }
+    .course-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 1rem;
+    }
+    .course-input {
+      width: 100%;
+    }
+    .button-row {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+  </style>
 </head>
 <body>
   <div data-include="components/header.html"></div>
 
   <main>
-    <!-- Form Section -->
     <div id="formSection">
       <h3>Adrienne Love | 🐞 | Ambitious Ladybug</h3>
       <h2>Fill Your Intro</h2>
       <form id="introForm">
         <fieldset>
           <legend>Your Information</legend>
+
           <label for="name">Full Name:</label>
           <input type="text" id="name" name="name" value="Adrienne Love" required /><br /><br />
 
@@ -29,68 +51,38 @@
           <input type="text" id="location" name="location" value="Charlotte, NC ❤️" required /><br /><br />
 
           <label for="personalBackground">Personal Background:</label>
-          <textarea id="personalBackground" name="personalBackground" required>
-I was born and raised in Charlotte, NC. I am a wife, mother, and business owner.</textarea
-          ><br /><br />
+          <textarea id="personalBackground" name="personalBackground" required>I was born and raised in Charlotte, NC. I am a wife, mother, and business owner.</textarea><br /><br />
 
           <label for="professional">Professional Background:</label>
-          <textarea id="professional" name="professional" required>
-I have a strong Financial background. I worked in Corporate America banking for almost 5 years and then transitioned to Real Estate. I currently work with a non-profit organization that enables me to give back and teach financial literacy to underserved communities.</textarea
-          ><br /><br />
+          <textarea id="professional" name="professional" required>I have a strong Financial background. I worked in Corporate America banking for almost 5 years and then transitioned to Real Estate. I currently work with a non-profit organization that enables me to give back and teach financial literacy to underserved communities.</textarea><br /><br />
 
           <label for="academic">Academic Background:</label>
-          <textarea id="academic" name="academic" required>
-I am a licensed Real Estate Agent and I am currently obtaining an Associate’s Degree in Full Stack Programming.</textarea
-          ><br /><br />
+          <textarea id="academic" name="academic" required>I am a licensed Real Estate Agent and I am currently obtaining an Associate’s Degree in Full Stack Programming.</textarea><br /><br />
 
           <label for="subjectBackground">Background in this Subject:</label>
-          <textarea id="subjectBackground" name="subjectBackground" required>
-I am new to this subject. No prior experience.</textarea
-          ><br /><br />
+          <textarea id="subjectBackground" name="subjectBackground" required>I am new to this subject. No prior experience.</textarea><br /><br />
 
           <label for="platform">Primary Computer Platform:</label>
           <input type="text" id="platform" name="platform" value="Windows 10 Laptop" required /><br /><br />
 
           <fieldset id="courseList" class="course-list">
-  <legend>Courses I'm Taking and Why:</legend>
-  <!-- existing courses -->
-  <input
-    type="text"
-    name="courses[]"
-    value="CSC221- Advanced Python Programming: It is required for my degree program, lol"
-    class="course-input"
-  >
-  <input
-    type="text"
-    name="courses[]"
-    value="CTS240- Project Management: It is required for my degree program, lol"
-    class="course-input"
-  >
-  <input
-    type="text"
-    name="courses[]"
-    value="WEB215- Advanced Web Markup and Scripting: It is required for my degree program, lol"
-    class="course-input"
-  >
-  <input
-    type="text"
-    name="courses[]"
-    value="WEB250 - Database Driven Websites: It is required for my degree program, lol"
-    class="course-input"
-  >
-  <button type="button" id="add-course-btn" class="add-course">Add Course</button>
-</fieldset>
+            <legend>Courses I'm Taking and Why:</legend>
+            <input type="text" name="courses[]" value="CSC221 - Advanced Python Programming: It is required for my degree program." class="course-input" />
+            <input type="text" name="courses[]" value="CTS240 - Project Management: It is required for my degree program." class="course-input" />
+            <input type="text" name="courses[]" value="WEB215 - Advanced Web Markup and Scripting: It is required for my degree program." class="course-input" />
+            <input type="text" name="courses[]" value="WEB250 - Database Driven Websites: It is required for my degree program." class="course-input" />
 
+            <div class="button-row">
+              <button type="button" id="add-course-btn">Add Course</button>
+              <button type="button" id="delete-course-btn">Delete Course</button>
+            </div>
+          </fieldset>
 
           <label for="funny">Funny/Interesting Item:</label>
-          <textarea id="funny" name="funny" required>
-I am the most introverted extrovert you will ever meet. 🙃</textarea
-          ><br /><br />
+          <textarea id="funny" name="funny" required>I am the most introverted extrovert you will ever meet. 🙃</textarea><br /><br />
 
           <label for="other">I'd also like to share:</label>
-          <textarea id="other" name="other" required>
-I recently got married, and my new legal name is Adrienne Love!</textarea
-          ><br /><br />
+          <textarea id="other" name="other" required>I recently got married, and my new legal name is Adrienne Love!</textarea><br /><br />
 
           <button type="submit">Generate My Page</button>
           <button type="button" id="resetBtn">Reset Form</button>
@@ -98,28 +90,12 @@ I recently got married, and my new legal name is Adrienne Love!</textarea
       </form>
     </div>
 
-    <!-- Intro Section -->
     <div id="introSection" style="display: none;">
       <h3>Adrienne Love | 🐞 | Ambitious Ladybug</h3>
       <h2>About The Owner</h2>
       <figure>
-        <img
-          id="previewImage"
-          src="images/lover.png"
-          alt="Beautiful Me ;-)"
-          class="center"
-          width="300"
-          height="300"
-        />
-        <img
-          id="displayImage"
-          src="images/lover.png"
-          alt="Your Photo"
-          class="center"
-          width="300"
-          height="300"
-          style="display: none;"
-        />
+        <img id="previewImage" src="images/lover.png" alt="Beautiful Me ;-)" width="300" height="300" />
+        <img id="displayImage" src="images/lover.png" alt="Your Photo" width="300" height="300" style="display: none;" />
         <figcaption><em id="locationDisplay">Charlotte, NC ❤️</em></figcaption>
       </figure>
       <ul>
