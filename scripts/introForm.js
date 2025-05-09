@@ -110,3 +110,17 @@ if (buttonRow) {
     formSection.style.display = "block";
   });
 });
+
+// Load external HTML components (e.g. header and footer)
+document.querySelectorAll("[data-include]").forEach(async (el) => {
+  const file = el.getAttribute("data-include");
+  try {
+    const resp = await fetch(file);
+    if (!resp.ok) throw new Error(`Failed to load ${file}`);
+    const html = await resp.text();
+    el.innerHTML = html;
+  } catch (err) {
+    console.error(err);
+    el.innerHTML = `<p>Could not load ${file}</p>`;
+  }
+});
