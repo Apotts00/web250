@@ -9,7 +9,7 @@
 	<script src="https://lint.page/kit/880bd5.js" crossorigin="anonymous"></script>
 </head>
 <body>
-	<div data-include="components/header.html"></div>
+	<?php include 'components/header.php'; ?>
 <main>
     <h3>Welcome to FizzBuzz!</h3>
 
@@ -73,13 +73,13 @@
 </form>
 
 	
-<script src="scripts/fizzBuzz.js"></script>
+<?php include 'components/footer.php'; ?>
 	
     <h3 id="welcomeMessage">🐞</h3>
     <ul id="fizzbuzzResults"></ul>
     
 </main>
-	<div data-include="components/footer.html"></div>
+	<div data-include="components/footer.php"></div>
 	<script src="scripts/HTMLInclude.js"></script>
   </body>
 </html>
